@@ -1,0 +1,47 @@
+<ion-view view-title="{{'VIEWS.OUTCOME.TITLE' | translate}}">
+  <ion-content>
+    <div class="card">
+	  <div class="item item-divider">
+	    {{'VIEWS.OUTCOME.TOTAL' | translate}}
+	  </div>
+	  <div class="item">
+		  <div class="row">
+				  <div class="col col-50 assertive">{{totals.amount | currency: config.currencyValue : 0}}</div>
+				  <div class="col col-50"><br><b>{{totals.budget-totals.amount | currency: config.currencyValue : 0}}</b></div>
+			</div>
+		  <div class="row">
+				  <div class="col col-50 balanced">{{totals.budget | currency: config.currencyValue : 0}}</div> 
+			</div>
+	  </div>
+	</div>
+    <div class="card" ng-repeat="outcome in outcomes | filter:{active: 1} track by outcome.id">
+	  <div class="item item-divider item-checkbox item-icon-right">
+     <label class="checkbox outcome_check_label">
+       <input type="checkbox" ng-change="changeTotals($index, outcome.id)" ng-model="checked[$index]">
+     </label>
+	    {{outcome.name}} - {{getCategory(outcome.category_id)}}<br>
+	    <span class="assertive">{{checked[$index] ? (outcomeTotal(outcome.id) | percentage: totals.amount) : 0}}%</span> / <span class="balanced">{{checked[$index] ? (outcome.budget | percentage: totals.budget) : 0}}%</span>
+   		<a href="#/app/outcome/editOutcome/{{outcome.id}}"><i class="icon ion-ios-compose-outline"></i></a>
+   		
+	  </div>
+	  <div class="item">
+		  <div class="row">
+				  <div class="col col-50 assertive">{{outcomeTotal(outcome.id) | currency: config.currencyValue : 0}}</div>
+				  <div class="col col-50"><br><b>{{outcome.budget-outcomeTotal(outcome.id) | currency: config.currencyValue : 0}}</b></div> 
+
+
+<!-- 				  <div class="col col-50 assertive"><b>%{{outcome.amount | percentage: totals.amount}}</b></div> -->
+			</div>
+		  <div class="row">
+				  <div class="col col-50 balanced">{{outcome.budget | currency: config.currencyValue : 0}}</div> 
+
+
+<!-- 				  <div class="col col-50 balanced"><b>%{{outcome.budget | percentage: totals.budget}}</b></div> -->
+			</div>
+	  </div>
+	</div>
+  </ion-content>
+<ion-footer-bar align-title="center" class="bar-dark">
+    <a href="#/app/outcome/newDailyOutcome" class="title" style="text-decoration: none">{{'VIEWS.OUTCOME.DAILY_OUTCOMES' | translate}}</a>
+</ion-footer-bar>
+</ion-view>

@@ -1,0 +1,71 @@
+<ion-view view-title="{{'VIEWS.HOME.TITLE' | translate}}">
+  <ion-content>
+    <div class="card">
+	  <div class="item item-divider">
+	    {{'VIEWS.HOME.INCOME_TOTAL' | translate}}
+	  </div>
+	  <div class="item item-body">
+	  	  <div ng-if="incomes.length == 0">{{'VIEWS.HOME.NO_INCOME' | translate}}</div>
+	  	  <div class="row" ng-if="incomes.length > 0">
+				  <div class="col col-50 ">Ingresos Proyectados: {{incomeTotals.budget | currency: config.currencyValue  : 0}}</div>
+			</div>
+		  <div class="row" ng-if="incomes.length > 0">
+				  <div class="col col-50 balanced">Ingresos confirmados: {{incomeTotals.amount | currency: config.currencyValue : 0}}</div>
+				  <div class="col col-50 assertive"><br>{{(incomeTotals.amount )-(incomeTotals.budget) | currency: config.currencyValue  : 0}}</div>
+			</div>
+		  
+	  </div>
+	</div>
+    <div class="card">
+	  <div class="item item-divider">
+	    {{'VIEWS.HOME.OUTCOME_TOTAL' | translate}}
+	  </div>
+	  <div class="item item-body">
+	  	  <div ng-if="outcomes.length == 0">{{'VIEWS.HOME.NO_OUTCOME' | translate}}</div>
+	  	  <div class="row" ng-if="outcomes.length != 0">
+				  <div class="col col-50 ">Egresos Proyectados{{outcomeTotals.budget | currency: config.currencyValue  : 0}}</div>
+			</div>
+		  <div class="row" ng-if="outcomes.length != 0">
+				  <div class="col col-50 balanced">Egresos Confirmados{{outcomeTotals.amount | currency: config.currencyValue  : 0}}</div>
+				  <div class="col col-50 assertive"><br>{{(outcomeTotals.budget)-(outcomeTotals.amount) | currency: config.currencyValue  : 0}}</div>
+			</div>
+		  
+	  </div>
+	</div>
+    <div class="card">
+	  <div class="item item-divider align_center">
+	    {{'VIEWS.HOME.ACTUAL_MONTH' | translate}}
+	  </div>
+	  <div class="item item-body align_center">
+			<div><b>{{incomeTotals.amount - outcomeTotals.amount | currency: config.currencyValue  : 0}}</b></div>
+	  </div>
+	</div>
+    <div class="card">
+	  <div class="item item-divider align_center">
+	    {{'VIEWS.HOME.PREVIOUS_MONTH' | translate}}
+	  </div>
+	  <div class="item item-body align_center">
+			<div><b>{{lastMonthValue | currency: config.currencyValue  : 0}}</b></div>
+	  </div>
+	</div>
+    <div class="card">
+	  <div class="item item-divider align_center">
+	    {{'VIEWS.HOME.TOTAL_AMOUNT' | translate}}
+	  </div>
+	  <div class="item item-body align_center">
+			<div ng-class="fullTotal() < 0 ? 'assertive' : 'balanced'"><b>{{ fullTotal() | currency: config.currencyValue  : 0}}</b></div>
+	  </div>
+	</div>
+
+  </ion-content>
+<ion-footer-bar align-title="center" class="bar-dark">
+  <div class="buttons">
+    <a class="button" href="#/app/income/newDailyIncome">{{'VIEWS.INCOME.DAILY_INCOMES' | translate}}</a>
+  </div>
+  <h1 class="title"></h1>
+  <div class="buttons">
+    <a class="button" href="#/app/outcome/newDailyOutcome">{{'VIEWS.OUTCOME.DAILY_OUTCOMES' | translate}}</a>
+  </div>
+</ion-footer-bar>
+</ion-view>
+

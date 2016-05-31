@@ -1,0 +1,68 @@
+<ion-view view-title="{{'VIEWS.INCOME.TITLE' | translate}}">
+  <ion-content>
+    <div class="card">
+	  <div class="item item-divider">
+	    {{'VIEWS.INCOME.TOTAL' | translate}}
+	  </div>
+	  <div class="item">
+	  <div class="row">
+				  <div class="col col-75 ">Presupuesto de Ingresos: {{totals[0].budget + totals[1].budget | currency: config.currencyValue : 0}}</div>
+			</div>
+		  <div class="row">
+				  <div class="col col-75 balanced">Ingresos Confirmados: {{totals[0].amount + totals[1].amount | currency: config.currencyValue : 0}}</div>
+				  <div class="col col-25 assertive"><br><b>{{(totals[0].amount + totals[1].amount) - (totals[0].budget + totals[1].budget)| currency: config.currencyValue : 0}}</b></div>
+			</div>
+		  
+	  </div>
+	</div>
+    <div class="card">
+	  <div class="item item-divider">
+	    {{'VIEWS.INCOME.TOTAL_LINEAL' | translate}}<br>
+	    <span class="balanced">{{totals[0].amount | currency: config.currencyValue : 0}}</span> / <span class="assertive">{{totals[0].budget | currency: config.currencyValue : 0}}</span>
+	  </div>
+		<div class="item">
+	  	   <div class="list">
+		  	<div class="item item-checkbox item-icon-right" ng-repeat="income in incomes  | filter:{active: 1} | filter:{type:0}">
+		     <label class="checkbox">
+		       <input type="checkbox"  ng-change="changeTotals($index, income.type, income.id)" ng-model="checked[income.id]">
+		     </label>
+			  <div class="row">
+					  <div class="col col-50"><br>{{income.name}}</div>
+					  <div class="col col-50 balanced ">{{incomeTotal(income.id) | currency: config.currencyValue : 0}}</div>
+				</div>
+			  <div class="row">
+					  <div class="col col-50 col-offset-50 assertive">{{income.budget | currency: config.currencyValue : 0}}</div>
+				</div>
+   				<a href="#/app/income/editIncome/{{income.id}}"><i class="icon ion-ios-compose-outline edition_icon"></i></a>
+			</div>
+		  </div>
+	  </div>
+	</div>
+    <div class="card">
+	  <div class="item item-divider">
+	    {{'VIEWS.INCOME.TOTAL_PASSIVE' | translate}}<br>
+	    <span class="balanced">{{totals[1].amount | currency: config.currencyValue : 0}}</span> / <span class="assertive">{{totals[1].budget | currency: config.currencyValue : 0}}</span>
+	  </div>
+		<div class="item">
+	  	   <div class="list">
+		  	<div class="item item-checkbox item-icon-right" ng-repeat="income in incomes | filter:{active: 1} | filter:{type:1}">
+		     <label class="checkbox">
+		       <input type="checkbox" ng-change="changeTotals($index, income.type, income.id)" ng-model="checked[income.id]">
+		     </label>
+			  <div class="row">
+					  <div class="col col-50"><br>{{income.name}}</div>
+					  <div class="col col-50 balanced">{{incomeTotal(income.id) | currency: config.currencyValue : 0}}</div>
+				</div>
+			  <div class="row">
+					  <div class="col col-50 col-offset-50 assertive">{{income.budget | currency: config.currencyValue : 0}}</div>
+				</div>
+   				<a href="#/app/income/editIncome/{{income.id}}"><i class="icon ion-ios-compose-outline edition_icon"></i></a>
+			</div>
+		  </div>
+	  </div>
+	</div>
+  </ion-content>
+<ion-footer-bar align-title="center" class="bar-dark">
+    <a href="#/app/income/newDailyIncome" class="title" style="text-decoration: none">{{'VIEWS.INCOME.DAILY_INCOMES' | translate}}</a>
+</ion-footer-bar>
+</ion-view>

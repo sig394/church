@@ -1,0 +1,33 @@
+<ion-view view-title="{{'VIEWS.CALENDAR.TITLE' | translate}}">
+  <ion-content>
+    <div class="card">
+<!-- 	  <div class="item item-divider"> -->
+<!-- 	    {{'VIEWS.CALENDAR.TITLE' | translate}} -->
+<!-- 	  </div> -->
+	  <div class="item">
+    	<flex-calendar options="options" events="events"></flex-calendar>
+	  </div>
+	</div>
+    <div class="card">
+	  <div class="item item-divider">
+	  	{{actualDate | date: 'dd/MM/yyyy'}}
+	  </div>
+	  <div class="item" ng-if="actualEvents.length == 0">
+	  	{{'VIEWS.CALENDAR.NO_EVENTS' | translate}}
+	  </div>
+	  <div class="item" ng-repeat="event in actualEvents" ng-class="event.isIncome ? 'calendar_income' : 'calendar_outcome'">
+    	<span class="calendar_texts">{{event.parent.name}}</span>
+    	<span class="calendar_texts calendar_amount">{{event.amount | currency: config.currencyValue : 0}}</span>
+	  </div>
+	</div>
+  </ion-content>
+<ion-footer-bar align-title="center" class="bar-dark">
+  <div class="buttons">
+    <a class="button" href="#/app/income/newDailyIncome/{{actualDate.toJSON()}}">{{'VIEWS.INCOME.DAILY_INCOMES' | translate}}</a>
+  </div>
+  <h1 class="title"></h1>
+  <div class="buttons">
+    <a class="button" href="#/app/outcome/newDailyOutcome/{{actualDate.toJSON()}}">{{'VIEWS.OUTCOME.DAILY_OUTCOMES' | translate}}</a>
+  </div>
+</ion-footer-bar>
+</ion-view>

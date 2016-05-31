@@ -1,0 +1,22 @@
+<ion-view view-title="{{'VIEWS.RESET.TITLE' | translate}}">
+  <ion-content>
+    <div class="card">
+	  <div class="item item-divider">
+	    {{'VIEWS.RESET.OPTIONS' | translate}}
+	  </div>
+	  <div class="item item-body">
+		  <div class="list">
+		  	<ion-checkbox ng-model="checks.configuration">{{'VIEWS.RESET.CONFIGURATION' | translate}}</ion-checkbox>
+		  	<ion-checkbox ng-model="checks.categories">{{'VIEWS.RESET.CATEGORIES' | translate}}</ion-checkbox>
+		  	<ion-checkbox ng-disabled="checks.categories" ng-model="checks.allOutcomes"><span ng-class="{'reset_disabled' : checks.categories}" >{{'VIEWS.RESET.ALL_OUTCOMES' | translate}}</span></ion-checkbox>
+		  	<ion-checkbox ng-disabled="checks.categories || checks.allOutcomes" ng-model="checks.dailyOutcomes"><span ng-class="{'reset_disabled' : checks.categories || checks.allOutcomes}">{{'VIEWS.RESET.DAILY_OUTCOMES' | translate}}</span></ion-checkbox>
+		  	<ion-checkbox ng-disabled="checks.categories || checks.allOutcomes" ng-model="checks.dailyOutcomesActual"><span ng-class="{'reset_disabled' : checks.categories || checks.allOutcomes || checks.dailyOutcomes}">{{'VIEWS.RESET.DAILY_OUTCOMES_ACTUAL' | translate}}</span></ion-checkbox>
+		  	<ion-checkbox ng-model="checks.allIncomes">{{'VIEWS.RESET.ALL_INCOMES' | translate}}</ion-checkbox>
+		  	<ion-checkbox ng-disabled="checks.allIncomes" ng-model="checks.dailyIncomes"><span ng-class="{'reset_disabled' : checks.allIncomes}">{{'VIEWS.RESET.DAILY_INCOMES' | translate}}</span></ion-checkbox>
+		  	<ion-checkbox ng-disabled="checks.allIncomes" ng-model="checks.dailyIncomesActual"><span ng-class="{'reset_disabled' : checks.allIncomes || checks.dailyIncomes}">{{'VIEWS.RESET.DAILY_INCOMES_ACTUAL' | translate}}</span></ion-checkbox>		 		  	
+		    <button class="button button-block button-positive" on-tap="askReset()" ng-disabled="noChecks()">{{'VIEWS.RESET.BUTTON' | translate}}</button>		  			  
+		  </div>
+	  </div>
+	</div>
+  </ion-content>
+</ion-view>

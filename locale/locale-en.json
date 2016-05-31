@@ -1,0 +1,327 @@
+{
+    "JANUARY": "January",
+    "FEBRUARY": "February",
+    "MARCH": "March",
+    "APRIL": "April",
+    "MAI": "May",
+    "JUNE": "June",
+    "JULY": "July",
+    "AUGUST": "August",
+    "SEPTEMBER": "September",
+    "OCTOBER": "October",
+    "NOVEMBER": "November",
+    "DECEMBER": "December",
+
+    "SUNDAY": "Sunday",
+    "MONDAY": "Monday",
+    "TUESDAY": "Tuesday",
+    "WEDNESDAY": "Wednesday",
+    "THURSDAY": "Thursday",
+    "FRIDAY": "Friday",
+    "SATURDAY": "Saturday",
+	"CURRENCY": {
+		"PESO": {
+			"ID": "peso",
+			"NAME": "Pesos",
+			"CURRENCY": "$"
+		},
+		"DOLLAR": {
+			"ID": "dollar",
+			"NAME": "Dollars",
+			"CURRENCY": "U$D"
+		},
+		"EURO": {
+			"ID": "euro",
+			"NAME": "Euros",
+			"CURRENCY": "€"
+		}
+	},
+	"LANGUAGES": {
+		"EN": {
+			"ID": "en",
+			"NAME": "English"
+		},
+		"ES": {
+			"ID": "es",
+			"NAME": "Spanish"
+		}
+	},
+	"NAME": "FinanzApp",
+	"VIEWS": {
+		"MENU": {
+			"TITLE": "Menu",
+			"HOME": "Summary",
+			"INCOME": "Income",
+			"OUTCOME": "Expenses",
+			"CATEGORIES": "Expenses Categories",
+			"HISTORY": "History",
+			"CONFIGURATION": "Configuration",
+			"CALENDAR": "Calendar",
+			"RESET": "Reset",
+			"HELP": "Help",
+			"UPDATE": "Update (developing)",
+			"LOGOUT": "Logout"
+		},
+		"HOME": {
+			"TITLE": "Summary",
+			"INCOME_TOTAL": "Total Income",
+			"INCOME_DATA": "Summary of daily income",
+			"OUTCOME_TOTAL": "Total Expenses",
+			"OUTCOME_DATA": "Summary of daily expenditures",
+			"NO_INCOME": "No income",
+			"NO_OUTCOME": "No expenditures",
+			"PREVIOUS_MONTH": "Last month balance",
+			"ACTUAL_MONTH": "Current month balance",
+			"TOTAL_AMOUNT": "TOTAL CUMULATIVE BALANCE",
+			"USERNAME": "Username",
+			"PASSWORD": "Password",
+			"BUTTON": "Login"
+		},
+		"INCOME": {
+			"TITLE": "Income",
+			"TOTAL": "Income balance",
+			"TOTAL_SIMPLE": "Total",
+			"TOTAL_LINEAL": "Total Linear Income",
+			"TOTAL_PASSIVE": "Total Passive Income",
+			"NO_LINEAL": "No linear income yet",
+			"NO_PASSIVES": "No passive income yet",
+			"DAILY_INCOMES": "Daily income"
+		},
+		"NEW_INCOME": {
+			"TITLE": "New Income",
+			"NAME_LABEL": "Income name",
+			"DATE_LABEL": "Pick a date",
+			"TYPE_LABEL": "Type",
+			"TYPE_LINEAL": "Linear Income",
+			"TYPE_PASSIVE": "Passive Income",
+			"AMOUNT_LABEL": "Value",
+			"BUDGET_LABEL": "Estimation",
+			"BUTTON": "Accept",
+			"POPUP": "The income {name} was successfully created.",
+			"VALIDATION_NAME": "Enter a name",
+			"VALIDATION_TYPE": "Select an income type",
+			"VALIDATION_BUDGET": "Enter a budget",
+			"VALIDATION_EXISTS": "The name already exists"
+		},
+		"EDIT_INCOME":{
+			"TITLE": "Edit Income",
+			"DELETE_BUTTON": "Delete",
+			"POPUP": "The income {name} was successfully edited.",
+			"POPUP_DELETE_TITLE": "Are you sure?",
+			"POPUP_DELETE_BODY": "The deleted data can not be recovered, Do you want to delete this income anyway?",
+			"POPUP_DELETE_ACCEPT": "Yes",
+			"POPUP_DELETE_CANCEL": "No"
+		},
+		"NEW_DAILY_INCOME": {
+			"TITLE": "New Daily Income",
+			"DATE_LABEL": "Pick a date",
+			"TYPE_LABEL": "Type",
+			"TYPE_LINEAL": "Linear Income",
+			"TYPE_PASSIVE": "Passive Income",
+			"AMOUNT_LABEL": "Value",
+			"INCOME_LABEL": "Income",
+			"BUTTON": "Accept",
+			"POPUP": "The daily income was successfully created.",
+			"NO_CATEGORY_TITLE": "No income",
+			"NO_CATEGORY_BODY": "You must create at least one income before adding a daily income.",
+			"VALIDATION_DATE": "Pick a date",
+			"VALIDATION_TYPE": "Select an income type",
+			"VALIDATION_INCOME": "Select an income",
+			"VALIDATION_AMOUNT": "Enter an amount"
+		},
+		"OUTCOME": {
+			"TITLE": "Expenses",
+			"TOTAL": "Expenses balance",
+			"DAILY_OUTCOMES": "Daily expenses"
+		},
+		"NEW_OUTCOME": {
+			"TITLE": "New Expense",
+			"NAME_LABEL": "Expense name",
+			"DATE_LABEL": "Pick a date",
+			"CATEGORY_LABEL": "Category",
+			"AMOUNT_LABEL": "Value",
+			"BUDGET_LABEL": "Estimation",
+			"BUTTON": "Accept",
+			"POPUP": "The expense {name} was successfully created.",
+			"NO_CATEGORY_TITLE": "No categories",
+			"NO_CATEGORY_BODY": "You must create at least one category before adding an expense.",
+			"VALIDATION_NAME": "Enter a name",
+			"VALIDATION_CATEGORY": "Select a category",
+			"VALIDATION_EXISTS": "The name already exists"
+		},
+		"EDIT_OUTCOME":{
+			"TITLE": "Edit Expense",
+			"DELETE_BUTTON": "Delete",
+			"POPUP": "The expenditure {name} was successfully edited.",
+			"POPUP_TITLE": "Are you sure?",
+			"POPUP_BODY": "The deleted data can not be recovered, Do you want to delete this expense anyway?",
+			"POPUP_ACCEPT": "Yes",
+			"POPUP_CANCEL": "No"
+		},
+		"NEW_DAILY_OUTCOME": {
+			"TITLE": "New Daily Expense",
+			"DATE_LABEL": "Pick a date",
+			"OUTCOME_LABEL": "Expense",
+			"AMOUNT_LABEL": "Value",
+			"BUTTON": "Accept",
+			"POPUP": "The daily expense was successfully created.",
+			"NO_CATEGORY_TITLE": "No expenses",
+			"NO_CATEGORY_BODY": "You must create at least one expense before adding a daily expense.",
+			"VALIDATION_DATE": "Pick a date",
+			"VALIDATION_OUTCOME": "Select an expenditure",
+			"VALIDATION_AMOUNT": "Enter an amount"
+		},
+		"CATEGORIES": {
+			"TITLE": "Expenses Categories",
+			"TOTAL": "Categories Total"
+		},
+		"NEW_CATEGORY": {
+			"TITLE": "New Category",
+			"LABEL": "New Description",
+			"BUTTON": "Accept",
+			"POPUP": "The category {name} was successfully created.",
+			"VALIDATION_NAME": "Type a category name",
+			"VALIDATION_EXISTS": "The name already exists"
+		},
+		"EDIT_CATEGORY":{
+			"TITLE": "Edit Category",
+			"DELETE_BUTTON": "Delete",
+			"POPUP": "The category {name} was successfully edited.",
+			"POPUP_DELETE_TITLE": "Are you sure?",
+			"POPUP_DELETE_BODY": "If you erase this category all associated expenses will be permanently deleted too, Do you want to delete this category anyway?",
+			"POPUP_DELETE_ACCEPT": "Yes",
+			"POPUP_DELETE_CANCEL": "No"
+		},
+		"HISTORY": {
+			"TITLE": "History",
+			"RADIOS": "Pick an option",
+			"COMPARE": "Compare",
+			"RANGE": "Range of dates",
+			"DATES_COMPARE": "Months to compare",
+			"DATES_RANGE": "Range in between months",
+			"BUTTON": "Update Chart",
+			"CHART": "Chart",
+			"NO_CHART": "Please fill in the options above and tap 'Update Chart'."
+		},
+		"CONFIGURATION": {
+			"TITLE": "Configuration",
+			"LANGUAGE": "Language",
+			"CURRENCY": "Currency",
+			"ALARM" : "Daily Notification",
+			"NOTIFICATION" : "Please review your FinanzApp!",
+			"INITIAL" : "Initial balance"
+		},
+		"CALENDAR": {
+			"TITLE": "Calendar",
+			"NO_EVENTS": "No incomes or expenses."
+		},
+		"RESET": {
+			"TITLE": "Reset",
+			"OPTIONS": "Choose one or several options",
+			"CONFIGURATION": "Configuration",
+			"CATEGORIES": "Categories",
+			"ALL_OUTCOMES": "All expenses",
+			"DAILY_OUTCOMES": "Daily expenses only",
+			"DAILY_OUTCOMES_ACTUAL": "Actual month daily expenses",
+			"ALL_INCOMES": "All income",
+			"DAILY_INCOMES": "Daily income only",
+			"DAILY_INCOMES_ACTUAL": "Actual month daily income",
+			"BUTTON": "Accept",
+			"POPUP_TITLE": "Are you sure?",
+			"POPUP_BODY": "The deleted data can not be recovered, Do you want to continue anyway?",
+			"POPUP_ACCEPT": "Yes",
+			"POPUP_CANCEL": "No",
+			"ALERT_TITLE": "Finish",
+			"ALERT_BODY": "The entries were successfully removed",
+			"ALERT_BUTTON": "Accept"
+		},
+		"HELP": {
+			"TITLE": "Help",
+			"SCREENS": "How to ...?",
+			"FAQ": "FAQs"
+		},
+		"UPDATE": {
+			"TITLE": "Update (developing)",
+			"BUTTON": {
+				"CHECK": "Check for updates",
+				"UPDATE": "Download update"
+			}
+		}
+	},
+	"FAQS": {
+		"FAQ_1": {
+			"QUESTION": "How to add a new income?",
+			"ANSWER": "On the menu select the option INCOME, then on the top right corner of the screen select +."
+		},
+		"FAQ_2": {
+			"QUESTION": "What is a passive income?",
+			"ANSWER": "A type of income received without having to invest hours of work. For example: investments in real estate, interests, royalties, rent, etc. "
+		},
+		"FAQ_3": {
+			"QUESTION": "What is a linear income?",
+			"ANSWER": "A type of income you receive by exchanging hours of work for money For example. Your job, the sale of a property, a small business income."
+		},
+		"FAQ_4": {
+			"QUESTION": "How to add a new egress?",
+			"ANSWER": "On the menu select the option EGRESS, then on the top right corner of the screen select +."
+		},
+		"FAQ_5": {
+			"QUESTION": "What are the egress categories?",
+			"ANSWER": "An ensemble of different egresses where you can find different expenses for example: the HOME category has different egress´s like water, light, rent, food etc. The ENTERTAINMET category includes party, hangouts, trips etc. "
+		},
+		"FAQ_6": {
+			"QUESTION": "What can I see on the resume screen?",
+			"ANSWER": "The total income, egress and the monthly balance.\nLast month’s balance.\nAnd the accumulated total balance that represents the balance of the current month plus last month’s balance. This data represents what you should have in your bank account and in cash."
+		},
+		"FAQ_7": {
+			"QUESTION": "What can I see on the calendar screen?",
+			"ANSWER": "The days where a transaction was made are reflected, whether they were an income or an egress."
+		},
+		"FAQ_8": {
+			"QUESTION": "What can I see on the record screen?",
+			"ANSWER": "In this screen both income and egress can be compared between months, or the accumulated income and egress of a certain period of time."
+		},
+		"FAQ_9": {
+			"QUESTION": "Filters",
+			"ANSWER": "Filters (<i class='icon ion-checkmark-circled'></i>) are options you can disable to analyze both total income and egress without the filtered value."
+		},
+		"FAQ_10": {
+			"QUESTION": "Data interpretation",
+			"ANSWER": "<ul class=\"help_detail_list\"><li><b>Red values:</b> real values accumulated every month.</li><li><b>Green values:</b> expected monthly budget of both income and egress.</li><li><b>Values in bold:</b> the difference between a real value and a budget.</li><li>The percentages represent each income of the total income. To have healthy personal finances, this should not exceed 5%.</li></ul>"
+		}
+	},
+	"HELP":{
+		"HOME": {
+			"TITLE": "Summary Screen",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"INCOME": {
+			"TITLE": "Income Screen",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"OUTCOME": {
+			"TITLE": "Expenses Screen",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"CATEGORIES": {
+			"TITLE": "Expenses Categories Screen",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"HISTORY": {
+			"TITLE": "History Screen",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"CONFIGURATION": {
+			"TITLE": "Configuration Screen",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"CALENDAR": {
+			"TITLE": "Calendar Screen",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"RESET": {
+			"TITLE": "Reset Screen",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		}
+	}
+}

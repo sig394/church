@@ -1,0 +1,39 @@
+<ion-view view-title="{{'VIEWS.NEW_DAILY_OUTCOME.TITLE' | translate}}">
+  <ion-content>
+    <div class="card" ng-if="outcomes.length == 0">
+	  <div class="item item-divider">
+	  	  <div>{{'VIEWS.NEW_DAILY_OUTCOME.NO_CATEGORY_TITLE' | translate}}</div>
+    	</div>
+	  <div class="item item-body">
+	  	  <div>{{'VIEWS.NEW_DAILY_OUTCOME.NO_CATEGORY_BODY' | translate}}</div>
+    	</div>
+    </div>
+    <div class="card" ng-if="outcomes.length > 0">
+	  <div class="list list-inset">
+			  <ionic-datepicker idate="currentDate" callback="datePickerCallback">
+			    <button class="button button-block button-positive"> {{ currentDate | date:'dd - MMMM - yyyy' }} </button>
+			</ionic-datepicker>
+	  	   <label class="item item-input-inset item-select create_deck_select">
+		    <div class="input-label create_deck_cards">
+		      {{'VIEWS.NEW_DAILY_OUTCOME.OUTCOME_LABEL' | translate}}
+		    </div>
+		    <select ng-model="newOutcome.outcomeParent" ng-options="outcome.name for outcome in outcomes">
+		    </select>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">{{'VIEWS.NEW_DAILY_OUTCOME.AMOUNT_LABEL' | translate}}</span>
+		    <input type="number" placeholder="0" min="0" ng-model="newOutcome.amount" required> 
+		  </label>
+		  <div class="item">
+		  	<div><span style="color:{{!currentDate ? 'red' : 'green'}}"><i ng-if="currentDate" class="icon ion-checkmark"></i><i ng-if="!currentDate" class="icon ion-close"></i> {{'VIEWS.NEW_DAILY_OUTCOME.VALIDATION_DATE' | translate}}</span></div>
+		  	<div><span style="color:{{!newOutcome.outcomeParent ? 'red' : 'green'}}"><i ng-if="newOutcome.outcomeParent" class="icon ion-checkmark"></i><i ng-if="!newOutcome.outcomeParent" class="icon ion-close"></i> {{'VIEWS.NEW_DAILY_OUTCOME.VALIDATION_OUTCOME' | translate}}</span></div>
+		  	<div><span style="color:{{!newOutcome.amount ? 'red' : 'green'}}"><i ng-if="newOutcome.amount" class="icon ion-checkmark"></i><i ng-if="!newOutcome.amount" class="icon ion-close"></i> {{'VIEWS.NEW_DAILY_OUTCOME.VALIDATION_AMOUNT' | translate}}</span></div>
+		  </div>
+		<button class="button button-block button-positive" on-tap="saveOutcome()" ng-disabled="!newOutcome.amount || !currentDate">{{'VIEWS.NEW_DAILY_OUTCOME.BUTTON' | translate}}</button>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
+    <script id="donePopupDailyOutcome.html" type="text/ng-template">
+      <div>{{'VIEWS.NEW_DAILY_OUTCOME.POPUP' | translate}}</div>
+    </script>

@@ -1,0 +1,327 @@
+{
+	"JANUARY": "Enero",
+	"FEBRUARY": "Febrero",
+	"MARCH": "Marzo",
+	"APRIL": "Abril",
+	"MAI": "Mayo",
+	"JUNE": "Junio",
+	"JULY": "Julio",
+	"AUGUST": "Agosto",
+	"SEPTEMBER": "Septiembre",
+	"OCTOBER": "Octubre",
+	"NOVEMBER": "Noviembre",
+	"DECEMBER": "Diciembre",
+	
+	"SUNDAY": "Domingo",
+	"MONDAY": "Lunes",
+	"TUESDAY": "Martes",
+	"WEDNESDAY": "Miércoles",
+	"THURSDAY": "Jueves",
+	"FRIDAY": "Viernes",
+	"SATURDAY": "Sábado",
+	"CURRENCY": {
+		"PESO": {
+			"ID": "peso",
+			"NAME": "Pesos",
+			"CURRENCY": "$"
+		},
+		"DOLLAR": {
+			"ID": "dollar",
+			"NAME": "Dólares",
+			"CURRENCY": "U$D"
+		},
+		"EURO": {
+			"ID": "euro",
+			"NAME": "Euros",
+			"CURRENCY": "€"
+		}
+	},
+	"LANGUAGES": {
+		"EN": {
+			"ID": "en",
+			"NAME": "Inglés"
+		},
+		"ES": {
+			"ID": "es",
+			"NAME": "Español"
+		}
+	},
+	"NAME": "FinanzApp",
+	"VIEWS": {
+		"MENU": {
+			"TITLE": "Menú",
+			"HOME": "Resúmen",
+			"INCOME": "Ingresos Proyectados",
+			"OUTCOME": "Egresos Proyectados",
+			"CATEGORIES": "Categorías de Egresos",
+			"HISTORY": "Historial",
+			"CONFIGURATION": "Configuración",
+			"CALENDAR": "Calendario",
+			"RESET": "Restaurar",
+			"HELP": "Ayuda",
+			"UPDATE": "Actualizar (desarrollo)",
+			"LOGOUT": "Cerrar Sesión"
+		},
+		"HOME": {
+			"TITLE": "Resúmen",
+			"INCOME_TOTAL": "Total de Ingresos",
+			"INCOME_DATA": "Acá irá el resumen de los ingresos",
+			"OUTCOME_TOTAL": "Total de Egresos",
+			"OUTCOME_DATA": "Acá irá el resumen de los egresos",
+			"NO_INCOME": "No hay ingresos",
+			"NO_OUTCOME": "No hay egresos",
+			"PREVIOUS_MONTH": "Saldo del mes anterior",
+			"ACTUAL_MONTH": "Saldo de este mes",
+			"TOTAL_AMOUNT": "SALDO TOTAL ACUMULADO",
+			"USERNAME": "Username",
+			"PASSWORD": "Password",
+			"BUTTON": "Login"
+		},
+		"INCOME": {
+			"TITLE": "Ingresos Proyectados",
+			"TOTAL": "Total de ingresos",
+			"TOTAL_SIMPLE": "Total",
+			"TOTAL_LINEAL": "Total Ingresos Fijos",
+			"TOTAL_PASSIVE": "Total Ingresos Variables",
+			"NO_LINEAL": "No hay ingresos Fijos",
+			"NO_PASSIVES": "No hay ingresos Variables",
+			"DAILY_INCOMES": "Ingresos Diarios"
+		},
+		"NEW_INCOME": {
+			"TITLE": "Nuevo Ingreso",
+			"NAME_LABEL": "Nombre del Ingreso",
+			"DATE_LABEL": "Seleccione una fecha",
+			"TYPE_LABEL": "Tipo",
+			"TYPE_LINEAL": "Ingreso Fijo",
+			"TYPE_PASSIVE": "Ingreso Variable",
+			"AMOUNT_LABEL": "Valor",
+			"BUDGET_LABEL": "Presupuesto",
+			"BUTTON": "Aceptar",
+			"POPUP": "El ingreso {name} fue creado exitosamente.",
+			"VALIDATION_NAME": "Ingrese un nombre de entrada",
+			"VALIDATION_TYPE": "Seleccione un tipo de entrada",
+			"VALIDATION_BUDGET": "Ingrese un presupuesto",
+			"VALIDATION_EXISTS": "El nombre ya existe"
+		},
+		"EDIT_INCOME": {
+			"TITLE": "Editar Ingreso",
+			"DELETE_BUTTON": "Eliminar",
+			"POPUP": "El ingreso {name} fue editado exitosamente.",
+			"POPUP_DELETE_TITLE": "¿Está seguro?",
+			"POPUP_DELETE_BODY": "Los datos eliminados no podrás ser recuperados nunca más, ¿Desea eliminar esta entrada de todos modos?",
+			"POPUP_DELETE_ACCEPT": "Sí",
+			"POPUP_DELETE_CANCEL": "No"
+		},
+		"NEW_DAILY_INCOME": {
+			"TITLE": "Nuevo Ingreso Diario",
+			"DATE_LABEL": "Seleccione una fecha",
+			"TYPE_LABEL": "Tipo",
+			"TYPE_LINEAL": "Ingreso Lineal",
+			"TYPE_PASSIVE": "Ingreso Pasivo",
+			"AMOUNT_LABEL": "Valor",
+			"INCOME_LABEL": "Ingreso",
+			"BUTTON": "Aceptar",
+			"POPUP": "El ingreso diario fue creado exitosamente.",
+			"NO_CATEGORY_TITLE": "No hay ingresos",
+			"NO_CATEGORY_BODY": "Antes de crear un ingreso diario debe crear al menos un ingreso.",
+			"VALIDATION_DATE": "Seleccione una fecha",
+			"VALIDATION_TYPE": "Seleccione un tipo de ingreso",
+			"VALIDATION_INCOME": "Seleccione un ingreso",
+			"VALIDATION_AMOUNT": "Ingrese un valor"
+		},
+		"OUTCOME": {
+			"TITLE": "Egresos Proyectados",
+			"TOTAL": "Total de Egresos",
+			"DAILY_OUTCOMES": "Egresos diarios"
+		},
+		"NEW_OUTCOME": {
+			"TITLE": "Nuevo Egreso",
+			"NAME_LABEL": "Nombre del Egreso",
+			"DATE_LABEL": "Seleccione una fecha",
+			"CATEGORY_LABEL": "Categoría",
+			"AMOUNT_LABEL": "Valor",
+			"BUDGET_LABEL": "Presupuesto",
+			"BUTTON": "Aceptar",
+			"POPUP": "El egreso {name} fue creado exitosamente.",
+			"NO_CATEGORY_TITLE": "No hay categorías",
+			"NO_CATEGORY_BODY": "Antes de crear un egreso debe crear al menos una categoría de egresos.",
+			"VALIDATION_NAME": "Ingrese un nombre de egreso",
+			"VALIDATION_CATEGORY": "Seleccione una categoría",
+			"VALIDATION_EXISTS": "El nombre ya existe"
+		},
+		"EDIT_OUTCOME": {
+			"TITLE": "Editar Egreso",
+			"DELETE_BUTTON": "Eliminar",
+			"POPUP": "El egreso {name} fue editado exitosamente.",
+			"POPUP_DELETE_TITLE": "¿Está seguro?",
+			"POPUP_DELETE_BODY": "Los datos eliminados no podrás ser recuperados nunca más, ¿Desea eliminar este egreso de todos modos?",
+			"POPUP_DELETE_ACCEPT": "Sí",
+			"POPUP_DELETE_CANCEL": "No"
+		},
+		"NEW_DAILY_OUTCOME": {
+			"TITLE": "Nuevo Egreso Diario",
+			"DATE_LABEL": "Seleccione una fecha",
+			"OUTCOME_LABEL": "Egreso",
+			"AMOUNT_LABEL": "Valor",
+			"BUTTON": "Aceptar",
+			"POPUP": "El egreso diario fue creado exitosamente.",
+			"NO_CATEGORY_TITLE": "No hay egresos",
+			"NO_CATEGORY_BODY": "Antes de crear un egreso diario debe crear al menos un egreso.",
+			"VALIDATION_DATE": "Seleccione una fecha",
+			"VALIDATION_OUTCOME": "Seleccione un egreso",
+			"VALIDATION_AMOUNT": "Ingrese un valor"
+		},
+		"CATEGORIES": {
+			"TITLE": "Categoría de Egreso",
+			"TOTAL": "Total de Categorias de Egresos"
+		},
+		"NEW_CATEGORY": {
+			"TITLE": "Nueva categoría de egreso",
+			"LABEL": "Nueva Descripción",
+			"BUTTON": "Aceptar",
+			"POPUP": "La categoría {name} fue creada exitosamente.",
+			"VALIDATION_NAME": "Ingrese un nombre de categoría",
+			"VALIDATION_EXISTS": "El nombre ya existe"
+		},
+		"EDIT_CATEGORY": {
+			"TITLE": "Editar Categoría",
+			"DELETE_BUTTON": "Eliminar",
+			"POPUP": "El egreso {name} fue editado exitosamente.",
+			"POPUP_DELETE_TITLE": "¿Está seguro?",
+			"POPUP_DELETE_BODY": "Si elimina la categoría se eliminarán permanentemente los egresos y egresos asociados, ¿Desea eliminar esta categoría de todos modos?",
+			"POPUP_DELETE_ACCEPT": "Sí",
+			"POPUP_DELETE_CANCEL": "No"
+		},
+		"HISTORY": {
+			"TITLE": "Historial",
+			"RADIOS": "Seleccione una opción",
+			"COMPARE": "Comparar",
+			"RANGE": "Ver rango",
+			"DATES_COMPARE": "Meses a comparar",
+			"DATES_RANGE": "Rango entre meses",
+			"BUTTON": "Actualizar",
+			"CHART": "Gráfico",
+			"NO_CHART": "Por favor complete las opciones y presione 'Actualizar' para ver el gráfico."
+		},
+		"CONFIGURATION": {
+			"TITLE": "Configuración",
+			"LANGUAGE": "Idioma",
+			"CURRENCY": "Moneda",
+			"ALARM" : "Notificación Diaria",
+			"NOTIFICATION" : "¡Por favor revisa tu FinanzApp!",
+			"INITIAL" : "Saldo inicial"
+		},
+		"CALENDAR": {
+			"TITLE": "Calendario",
+			"NO_EVENTS": "No hay ingresos ni egresos."
+		},
+		"RESET": {
+			"TITLE": "Restaurar",
+			"OPTIONS": "Elija que desea eliminar",
+			"CONFIGURATION": "Configuración",
+			"CATEGORIES": "Categorías",
+			"ALL_OUTCOMES": "Todos los egresos",
+			"DAILY_OUTCOMES": "Sólo egresos diarios",
+			"DAILY_OUTCOMES_ACTUAL": "Egresos diarios del mes actual",
+			"ALL_INCOMES": "Todos los ingresos",
+			"DAILY_INCOMES": "Sólo ingresos diarios",
+			"DAILY_INCOMES_ACTUAL": "Ingresos diarios del mes actual",
+			"BUTTON": "Continuar",
+			"POPUP_TITLE": "¿Está seguro?",
+			"POPUP_BODY": "Los datos eliminados no podrás ser recuperados nunca más, ¿Desea continuar de todos modos?",
+			"POPUP_ACCEPT": "Sí",
+			"POPUP_CANCEL": "No",
+			"ALERT_TITLE": "Hecho",
+			"ALERT_BODY": "Las entradas han sido eliminadas correctamente",
+			"ALERT_BUTTON": "Aceptar"
+		},
+		"HELP": {
+			"TITLE": "Ayuda",
+			"SCREENS": "¿Cómo usar...?",
+			"FAQ": "Preguntas Frecuentes"
+		},
+		"UPDATE": {
+			"TITLE": "Actualizar (desarrollo)",
+			"BUTTON": {
+				"CHECK": "Verificar actualizaciones",
+				"UPDATE": "Descargar actualización"
+			}
+		}
+	},
+	"FAQS": {
+		"FAQ_1": {
+			"QUESTION": "¿Cómo ingresar un nuevo INGRESO?",
+			"ANSWER": "En el menú seleccionar la opción INGRESOS, en la pantalla en la parte superior derecha seleccionar + ."
+		},
+		"FAQ_2": {
+			"QUESTION": "¿Qué son ingresos pasivos?",
+			"ANSWER": "Son ingresos que se reciben sin tener que cambiar horas de trabajo. Ej: Ingresos provenientes Inversiones en finca raíz, de intereses, regalías, arriendos de locales o apartamentos, etc."
+		},
+		"FAQ_3": {
+			"QUESTION": "¿Qué son ingresos lineales?",
+			"ANSWER": "Son ingresos que se reciben por el intercambio de horas de trabajo por un dinero: Ej: Venta de un bien, el salario, utilidades de un negocio pequeño, etc."
+		},
+		"FAQ_4": {
+			"QUESTION": "¿Cómo ingresar un nuevo EGRESO?",
+			"ANSWER": "En el menú seleccionar la opción EGRESOS, en la pantalla en la parte superior derecha seleccionar + ."
+		},
+		"FAQ_5": {
+			"QUESTION": "¿Qué son las CATEGORIAS DE EGRESOS?",
+			"ANSWER": "Es un conjunto en le diferentes egresos pueden pertenecer. Ej: En la categoría HOGAR pueden pertenecer los egresos, servicios, arriendo, comida. En la categoría ENTRETENIMIENTO pueden pertenecer los egresos, salidas a comer, rumba, paseos, etc."
+		},
+		"FAQ_6": {
+			"QUESTION": "¿Qué puedo ver en la pantalla RESUMEN?",
+			"ANSWER": "El total de ingresos, egresos y saldo del mes actual.\nEl saldo del mes anterior.\nY el saldo acumulado total, que representa el saldo del mes actual más el saldo del mes anterior, es decir, ese dato representa lo que debes tener entre tu cuenta bancaria y en efectivo."
+		},
+		"FAQ_7": {
+			"QUESTION": "¿Qué puedo ver en la pantalla CALENDARIO?",
+			"ANSWER": "En dicha pantalla se observan los días que se hizo alguna transacción, ya sea INGRESOS o EGRESOS."
+		},
+		"FAQ_8": {
+			"QUESTION": "¿Qué puedo ver en la pantalla HISTORIAL?",
+			"ANSWER": "En dicha pantalla, se pueden comparar los ingresos y los egresos de un mes contra otro mes. O ver el acumulado tanto de ingresos como de egresos en un periodo de tiempo determinado."
+		},
+		"FAQ_9": {
+			"QUESTION": "FILTROS",
+			"ANSWER": "Los filtros (<i class='icon ion-checkmark-circled'></i>) son opciones que puedes deshabilitar para analizar tanto los ingresos como los egresos totales sin ese valor filtrado."
+		},
+		"FAQ_10": {
+			"QUESTION": "INTERPRESTACION DE LOS DATOS EN LAS PANTALLAS",
+			"ANSWER": "<ul class=\"help_detail_list\"><li>Los valores en color ROJO, son los valores reales acumulados de cada mes.</li><li>Los valores en VERDE, son los presupuestos esperados tanto en ingresos como en egresos en cada mes.</li><li>Los valores en NEGRILLA, son la diferencia que existe entre los valores reales y los presupuestos.</li><li>Los PORCENTAJES, es lo que representa cada ingreso en el total de los ingresos. Para tener unas finanzas personales sanas, no debe superar el 5%.</li></ul>"
+		}
+	},
+	"HELP": {
+		"HOME": {
+			"TITLE": "Pantalla Resumen",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"INCOME": {
+			"TITLE": "Pantalla Ingresos",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"OUTCOME": {
+			"TITLE": "Pantalla Egresos",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"CATEGORIES": {
+			"TITLE": "Pantalla Categorías",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"HISTORY": {
+			"TITLE": "Pantalla Historial",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"CONFIGURATION": {
+			"TITLE": "Pantalla Configuración",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"CALENDAR": {
+			"TITLE": "Pantalla Calendario",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		},
+		"RESET": {
+			"TITLE": "Pantalla Restaurar",
+			"DETAIL": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan metus ac nisi eleifend molestie. Fusce mauris felis, scelerisque eget bibendum id, mollis sit amet neque. Morbi at risus ac magna elementum vehicula sit amet id augue. Mauris facilisis elit quis risus porttitor, ac gravida mauris tincidunt. Sed ullamcorper euismod convallis. Sed aliquet sapien a sem tincidunt, id auctor ante volutpat. Etiam elementum rutrum euismod."
+		}
+	}
+}

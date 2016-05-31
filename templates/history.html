@@ -1,0 +1,64 @@
+<ion-view view-title="{{'VIEWS.HISTORY.TITLE' | translate}}">
+  <ion-content has-bouncing="false">
+    <div class="list card">
+      <div class="item item-divider">
+          {{'VIEWS.HISTORY.RADIOS' | translate}}
+      </div>
+       <ion-radio ng-model="graph.radioOption" name="opts" ng-value="'compare'">{{'VIEWS.HISTORY.COMPARE' | translate}}</ion-radio>
+       <ion-radio ng-model="graph.radioOption" name="opts" ng-value="'range'">{{'VIEWS.HISTORY.RANGE' | translate}}</ion-radio>
+      <div class="item item-divider">
+          {{( graph.radioOption == 'compare' ? 'VIEWS.HISTORY.DATES_COMPARE' : 'VIEWS.HISTORY.DATES_RANGE') | translate}}
+      </div>
+      	<div class="row">
+	      	<div class="col">
+		  	   <label class="item item-select">
+			    <div class="input-label">
+			    </div>
+			    <select class="chart_selects" ng-model="dates.compareMonthOne" ng-options="opt as opt.name | translate for opt in months">
+			    </select>
+			  </label>
+	      	</div>
+	      	<div class="col">
+		  	   <label class="item item-select">
+			    <div class="input-label">
+			    </div>
+			    <select class="chart_selects" ng-model="dates.compareYearOne" ng-options="opt as opt.name | translate for opt in years">
+			    </select>
+			  </label>
+	      	</div>
+      	</div>
+      	<div class="row">
+	      	<div class="col">
+		  	   <label class="item item-select">
+			    <div class="input-label">
+			    </div>
+			    <select class="chart_selects" ng-model="dates.compareMonthTwo" ng-options="opt as opt.name | translate for opt in months">
+			    </select>
+			  </label>
+	      	</div>
+	      	<div class="col">
+		  	   <label class="item item-select">
+			    <div class="input-label">
+			    </div>
+			    <select class="chart_selects" ng-model="dates.compareYearTwo" ng-options="opt as opt.name | translate for opt in years">
+			    </select>
+			  </label>
+	      	</div>
+      	</div>
+      <div class="item">
+		<button class="button button-block button-positive" on-tap="updateChart()">{{'VIEWS.HISTORY.BUTTON' | translate}}</button>
+    	</div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">{{'VIEWS.HISTORY.CHART' | translate}}</div>
+      <div class="item item-chart" ng-if="graph.hidden">
+      	{{'VIEWS.HISTORY.NO_CHART' | translate}}
+      </div>
+      <div class="item item-chart" ng-if="!graph.hidden">
+        <div>
+  			<linechart data="graph.data" options="graph.options" mode="" width="" height="400"></linechart>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,66 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+        <a class="button button-icon button-clear ion-plus" href="{{view.href}}" ng-if="showRightButton()">
+        </a>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" ng-hie="{{isLogged}}">
+    <ion-header-bar class="bar-dark">
+      <h1 class="title">{{'VIEWS.MENU.TITLE' | translate}}</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close href="#/app/home" class="item-icon-left">
+    		<i class="icon ion-arrow-graph-up-right energized"></i>
+          {{'VIEWS.MENU.HOME' | translate}}
+        </ion-item>
+        <ion-item menu-close href="#/app/income" class="item-icon-left">
+    		<i class="icon ion-ios-download-outline balanced"></i>
+          {{'VIEWS.MENU.INCOME' | translate}}
+        </ion-item>
+        <ion-item menu-close href="#/app/outcome" class="item-icon-left">
+    		<i class="icon ion-ios-upload-outline assertive"></i>
+          {{'VIEWS.MENU.OUTCOME' | translate}}
+        </ion-item>
+        <ion-item menu-close href="#/app/categories" class="item-icon-left">
+    		<i class="icon ion-ios-pricetags" style="color:black"></i>
+          {{'VIEWS.MENU.CATEGORIES' | translate}}
+        </ion-item>
+        <ion-item menu-close href="#/app/history" class="item-icon-left">
+    		<i class="icon ion-stats-bars royal"></i>
+          {{'VIEWS.MENU.HISTORY' | translate}}
+        </ion-item>
+        <ion-item menu-close href="#/app/configuration" class="item-icon-left">
+    		<i class="icon ion-gear-b" style="color:darkgrey"></i>
+          {{'VIEWS.MENU.CONFIGURATION' | translate}}
+        </ion-item>
+        <ion-item menu-close href="#/app/calendar" class="item-icon-left">
+    		<i class="icon ion-ios-calendar-outline" style="color:#faac1c;"></i>
+          {{'VIEWS.MENU.CALENDAR' | translate}}
+        </ion-item>
+        <ion-item menu-close href="#/app/reset" class="item-icon-left">
+    		<i class="icon ion-ios-refresh-outline"></i>
+          {{'VIEWS.MENU.RESET' | translate}}
+        </ion-item>
+        <ion-item menu-close href="#/app/help" class="item-icon-left">
+    		<i class="icon ion-help-circled calm"></i>
+          {{'VIEWS.MENU.HELP' | translate}}
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

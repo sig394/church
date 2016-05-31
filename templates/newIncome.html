@@ -1,0 +1,44 @@
+<ion-view view-title="{{title | translate}}">
+  <ion-content>
+    <div class="card">
+	  <div class="list list-inset">
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">{{'VIEWS.NEW_INCOME.NAME_LABEL' | translate}}</span>
+		    <input type="text" placeholder="{{'VIEWS.NEW_INCOME.NAME_LABEL' | translate}}" ng-model="newIncome.name" required capitalize-first> 
+		  </label>
+	  	   <label class="item item-input-inset item-select create_deck_select">
+		    <div class="input-label create_deck_cards">
+		      {{'VIEWS.NEW_INCOME.TYPE_LABEL' | translate}}
+		    </div>
+		    <select ng-model="newIncome.type" ng-options="type.val as type.name | translate for type in incomeTypes">
+		    </select>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">{{'VIEWS.NEW_INCOME.BUDGET_LABEL' | translate}}</span>
+		    <input type="number" placeholder="0" min="0" ng-model="newIncome.budget" required> 
+		  </label>
+		  <div class="item">
+		  	<div><span style="color:{{!newIncome.name ? 'red' : 'green'}}"><i ng-if="newIncome.name" class="icon ion-checkmark"></i><i ng-if="!newIncome.name" class="icon ion-close"></i> {{'VIEWS.NEW_INCOME.VALIDATION_NAME' | translate}}</span></div>
+		  	<div><span style="color:{{!(newIncome.type+'') ? 'red' : 'green'}}"><i ng-if="(newIncome.type+'')" class="icon ion-checkmark"></i><i ng-if="!(newIncome.type+'')" class="icon ion-close"></i> {{'VIEWS.NEW_INCOME.VALIDATION_TYPE' | translate}}</span></div>
+		  	<div><span style="color:{{!newIncome.budget ? 'red' : 'green'}}"><i ng-if="newIncome.budget" class="icon ion-checkmark"></i><i ng-if="!newIncome.budget" class="icon ion-close"></i> {{'VIEWS.NEW_INCOME.VALIDATION_BUDGET' | translate}}</span></div>
+		  	<div ng-if="create && exists()"><span style="color:red"><i class="icon ion-close"></i> {{'VIEWS.NEW_INCOME.VALIDATION_EXISTS' | translate}}</span></div>
+		  </div>
+		  <div class="row" ng-if="!create">
+			  <div class="col">
+				<button class="button button-block button-outline button-assertive" on-tap="deleteIncome()">{{'VIEWS.EDIT_INCOME.DELETE_BUTTON' | translate}}</button>
+			  </div>
+			  <div class="col">
+				<button class="button button-block button-positive" on-tap="editIncome()" ng-disabled="!newIncome.name || !newIncome.budget">{{'VIEWS.NEW_INCOME.BUTTON' | translate}}</button>
+			  </div>
+		  </div>
+		<button  ng-if="create" class="button button-block button-positive" on-tap="saveIncome()" ng-disabled="!newIncome.name || !newIncome.budget || exists()">{{'VIEWS.NEW_INCOME.BUTTON' | translate}}</button>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
+    <script id="donePopupIncome.html" type="text/ng-template">
+      <div>{{'VIEWS.NEW_INCOME.POPUP' | translate:newIncome}}</div>
+    </script>
+    <script id="donePopupIncomeEdit.html" type="text/ng-template">
+      <div>{{'VIEWS.EDIT_INCOME.POPUP' | translate:newIncome}}</div>
+    </script>

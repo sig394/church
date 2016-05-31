@@ -1,0 +1,36 @@
+<ion-view view-title="{{'VIEWS.CONFIGURATION.TITLE' | translate}}">
+  <ion-content>
+	 <div class="card list list-inset">
+	  <label class="item item-input-inset item-stacked-label">
+	    <span class="input-label">{{'VIEWS.CONFIGURATION.INITIAL' | translate}}<br>
+	    <span class="input-currency">{{config.currencyValue}}</span> <input class="input-currency-input" type="number" ng-model="config.initial" ng-change="changeInitial()" step="1" placeholder="0">
+	  </label>
+  	   <label class="item item-input-inset item-select">
+	    <div class="input-label">
+	      {{'VIEWS.CONFIGURATION.LANGUAGE' | translate}}
+	    </div>
+	    <select ng-model="config.language" ng-change="changeLanguage()" ng-options="opt.val as opt.name | translate for opt in languages">
+	    </select>
+	  </label>
+  	   <label class="item item-input-inset item-select">
+	    <div class="input-label">
+	      {{'VIEWS.CONFIGURATION.CURRENCY' | translate}}
+	    </div>
+	    <select ng-model="config.currency" ng-change="changeCurrency()" ng-options="opt.val as opt.name | translate for opt in currencies">
+	    </select>
+	  </label>
+	    <div class="item item-toggle">
+	     {{'VIEWS.CONFIGURATION.ALARM' | translate}}
+	     <label class="toggle toggle-balanced">
+	       <input type="checkbox" ng-model="config.alarm.isOn" ng-change="toggleAlarm()">
+	       <div class="track">
+	         <div class="handle"></div>
+	       </div>
+	     </label>
+	  </div>
+	  <ionic-timepicker ng-if="config.alarm.isOn" etime="config.alarm.time" format="config.alarm.format" step="step" callback="timePickerCallback">    
+		<button ng-disable="!config.alarm.isOn" class="button button-block button-positive"><standard-time-meridian etime='config.alarm.time'></standard-time-meridian></button>
+		</ionic-timepicker>
+	</div>
+  </ion-content>
+</ion-view>

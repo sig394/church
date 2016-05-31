@@ -1,0 +1,51 @@
+<ion-view view-title="{{title | translate}}">
+  <ion-content>
+    <div class="card" ng-if="categories.length == 0">
+	  <div class="item item-divider">
+	  	  <div>{{'VIEWS.NEW_OUTCOME.NO_CATEGORY_TITLE' | translate}}</div>
+    	</div>
+	  <div class="item item-body">
+	  	  <div>{{'VIEWS.NEW_OUTCOME.NO_CATEGORY_BODY' | translate}}</div>
+    	</div>
+    </div>
+    <div class="card" ng-if="categories.length > 0">
+	  <div class="list list-inset">
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">{{'VIEWS.NEW_OUTCOME.NAME_LABEL' | translate}}</span>
+		    <input type="text" placeholder="{{'VIEWS.NEW_OUTCOME.NAME_LABEL' | translate}}" ng-model="newOutcome.name" required capitalize-first> 
+		  </label>
+	  	   <label class="item item-input-inset item-select create_deck_select">
+		    <div class="input-label create_deck_cards">
+		      {{'VIEWS.NEW_OUTCOME.CATEGORY_LABEL' | translate}}
+		    </div>
+		    <select ng-model="newOutcome.category_id" ng-options="category.id as category.name for category in categories">
+		    </select>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">{{'VIEWS.NEW_OUTCOME.BUDGET_LABEL' | translate}}</span>
+		    <input type="number" placeholder="0" min="0" ng-model="newOutcome.budget" required> 
+		  </label>
+		  <div class="item">
+		  	<div><span style="color:{{!newOutcome.name ? 'red' : 'green'}}"><i ng-if="newOutcome.name" class="icon ion-checkmark"></i><i ng-if="!newOutcome.name" class="icon ion-close"></i> {{'VIEWS.NEW_OUTCOME.VALIDATION_NAME' | translate}}</span></div>
+		  	<div><span style="color:{{!(newOutcome.category+'') ? 'red' : 'green'}}"><i ng-if="(newOutcome.category+'')" class="icon ion-checkmark"></i><i ng-if="!(newOutcome.category+'')" class="icon ion-close"></i> {{'VIEWS.NEW_OUTCOME.VALIDATION_CATEGORY' | translate}}</span></div>
+		  	<div ng-if="create && exists()"><span style="color:red"><i class="icon ion-close"></i> {{'VIEWS.NEW_OUTCOME.VALIDATION_EXISTS' | translate}}</span></div>
+		  </div>
+		  <div class="row" ng-if="!create">
+			  <div class="col">
+				<button class="button button-block button-outline button-assertive" on-tap="deleteOutcome()">{{'VIEWS.EDIT_OUTCOME.DELETE_BUTTON' | translate}}</button>
+			  </div>
+			  <div class="col">
+				<button class="button button-block button-positive" on-tap="editOutcome()" ng-disabled="!newOutcome.name">{{'VIEWS.NEW_OUTCOME.BUTTON' | translate}}</button>
+			  </div>
+		  </div>
+		<button ng-if="create" class="button button-block button-positive" on-tap="saveOutcome()" ng-disabled="exists() || !newOutcome.name">{{'VIEWS.NEW_OUTCOME.BUTTON' | translate}}</button>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
+    <script id="donePopupOutcome.html" type="text/ng-template">
+      <div>{{'VIEWS.NEW_OUTCOME.POPUP' | translate:newOutcome}}</div>
+    </script>
+    <script id="donePopupOutcomeEdit.html" type="text/ng-template">
+      <div>{{'VIEWS.EDIT_OUTCOME.POPUP' | translate:newOutcome}}</div>
+    </script>

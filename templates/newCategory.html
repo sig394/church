@@ -1,0 +1,31 @@
+<ion-view view-title="{{'VIEWS.NEW_CATEGORY.TITLE' | translate}}">
+  <ion-content>
+    <div class="card">
+	  <div class="list list-inset">
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">{{'VIEWS.NEW_CATEGORY.LABEL' | translate}}</span>
+		    <input type="text" placeholder="{{'VIEWS.NEW_CATEGORY.LABEL' | translate}}" ng-model="newCategory.name" required capitalize-first> 
+		  </label>
+		  <div class="item">
+		  	<div><span style="color:{{!newCategory.name ? 'red' : 'green'}}"><i ng-if="newCategory.name" class="icon ion-checkmark"></i><i ng-if="!newCategory.name" class="icon ion-close"></i> {{'VIEWS.NEW_CATEGORY.VALIDATION_NAME' | translate}}</span></div>
+		  	<div ng-if="create && exists()"><span style="color:red"><i class="icon ion-close"></i> {{'VIEWS.NEW_CATEGORY.VALIDATION_EXISTS' | translate}}</span></div>
+		  </div>
+		  <div class="row" ng-if="!create">
+			  <div class="col">
+				<button class="button button-block button-outline button-assertive" on-tap="deleteCategory()">{{'VIEWS.EDIT_CATEGORY.DELETE_BUTTON' | translate}}</button>
+			  </div>
+			  <div class="col">
+				<button class="button button-block button-positive" on-tap="editCategory()" ng-disabled="!newCategory.name">{{'VIEWS.NEW_CATEGORY.BUTTON' | translate}}</button>
+			  </div>
+		  </div>
+		<button ng-if="create" class="button button-block button-positive" on-tap="saveCategory()" ng-disabled="!newCategory.name || exists()">{{'VIEWS.NEW_CATEGORY.BUTTON' | translate}}</button>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
+    <script id="donePopup.html" type="text/ng-template">
+      <div>{{'VIEWS.NEW_CATEGORY.POPUP' | translate:newCategory}}</div>
+    </script>
+    <script id="donePopupEdit.html" type="text/ng-template">
+      <div>{{'VIEWS.EDIT_CATEGORY.POPUP' | translate:newCategory}}</div>
+    </script>

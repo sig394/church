@@ -1,0 +1,22 @@
+<ion-view view-title="{{'VIEWS.HELP.TITLE' | translate}}">
+  <ion-content>
+	 <div class="card list list-inset">
+		  <div class="item item-divider">
+		    {{'VIEWS.HELP.FAQ' | translate}}
+		  </div>
+        <ion-item ng-repeat="faq in faqs track by $index" href="#/app/help/faq/{{$index}}" class="item-icon-right help_faqs">
+    		<i class="icon ion-chevron-right"></i>
+            {{faq.question | translate}}
+        </ion-item>
+      </div>
+<!-- 	 <div class="card list list-inset"> -->
+<!-- 		  <div class="item item-divider"> -->
+<!-- 		    {{'VIEWS.HELP.SCREENS' | translate}} -->
+<!-- 		  </div> -->
+<!--         <ion-item href="#/app/help/screen/{{$index}}" ng-repeat="help in helps track by $index" class="item-icon-right"> -->
+<!--     		<i class="icon {{help.icon}}"></i> -->
+<!--           {{help.title | translate}} -->
+<!--         </ion-item> -->
+<!--       </div> -->
+  </ion-content>
+</ion-view>

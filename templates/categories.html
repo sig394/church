@@ -1,0 +1,40 @@
+<ion-view view-title="{{'VIEWS.CATEGORIES.TITLE' | translate}}">
+  <ion-content>
+    <div class="card">
+	  <div class="item item-divider">
+	    {{'VIEWS.CATEGORIES.TOTAL' | translate}}
+	  </div>
+	  <div class="item">
+		  <div class="row">
+		  	
+				  <div class="col col-50 assertive">{{tamount | currency: config.currencyValue : 0}}</div>
+				  <div class="col col-50"><br><b>{{tbudget-totalAmount() | currency: config.currencyValue : 0}}</b></div>
+			</div>
+		  <div class="row">
+				 <div class="col col-50 balanced">{{tbudget | currency: config.currencyValue : 0}}</div>
+			</div>
+	  </div>
+	</div>
+    <div class="card" ng-repeat="category in categories track by $index">
+	  <div class="item item-divider item-checkbox item-icon-right">
+     <label class="checkbox outcome_check_label">
+       <input type="checkbox" ng-model="checked[$index]">
+     </label>
+	    {{category.name}}<br>
+	    <span class="assertive">{{checked[$index] ? (totals[category.id].amount | percentage: tamount) : 0}}%</span> / <span class="balanced">{{checked[$index] ? (totals[category.id].budget | percentage: tbudget) : 0}}%</span>
+   		<a href="#/app/categories/editCategory/{{category.id}}"><i class="icon ion-ios-compose-outline"></i></a>
+   		
+	  </div>
+	  <div class="item">
+		  <div class="row">
+				  <div class="col col-50 assertive">{{totals[category.id].amount | currency: config.currencyValue : 0}}</div>
+				  <div class="col col-50"><br><b>{{totals[category.id].budget-totals[category.id].amount | currency: config.currencyValue : 0}}</b></div>
+			</div>
+		  <div class="row">
+		  		  <div class="col col-50 balanced">{{totals[category.id].budget | currency: config.currencyValue : 0}}</div>
+				  
+			</div>
+	  </div>
+	</div>
+  </ion-content>
+</ion-view>
